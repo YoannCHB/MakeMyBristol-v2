@@ -1,0 +1,183 @@
+@page { 
+    size : landscape;
+} 
+
+@media print {
+    body * {
+        display:none;
+    }
+    #fiche1 { 
+        display:block;
+    }
+
+    #fiche2 { 
+        display:block;
+    }
+
+    .titreFeuille {
+        display: block;
+    }
+
+    .zonedetexte {
+        display: block;
+    }
+}
+
+body{
+    background: #008CBA;
+	overflow: hidden;
+}
+
+p{
+    line-height: 18px;
+    margin: 0;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4%;
+    width: 100%;
+    background: transparent;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.menu:hover{
+    height: 6%;
+}
+
+.btn-menu{
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    border: none;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: 0.2s ease;
+    cursor: hand;
+}
+
+.btn-menu:hover{
+    letter-spacing: 2px;
+}
+
+.bristol{
+    width: auto;
+    height: 80%;
+    position: absolute;
+    top: 12%;
+    left: 30%;
+}
+
+.consigne{
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 4%;
+    height: 96%;
+    width: 20%;
+    background: white;
+    border-right: 1px solid Grey;
+    text-align: center;
+}
+
+.consigne p{
+    margin: 3px;
+}
+
+.zonedetexte{
+    position: absolute;
+    top: 16%;
+    left: 31%;
+    height: 74%;
+    width: 25%;
+    overflow: hidden;
+    text-align: left;
+}
+
+.titreFeuille{
+    position: absolute;
+    top: 12%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+.couleur{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    width: 30%;
+    height: 4%;
+}
+
+.couleur button{
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    border: none;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: 0.2s ease;
+    cursor: hand;
+    background: Blue;
+}
+
+.couleur button:hover{
+    letter-spacing: 2px;
+}
+
+.presentation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #008CBA;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+.presentation h1{
+    color: White;
+    font-size: 100px;
+    position: absolute;
+    top:25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.presentation button{
+    border: none;
+    position: absolute;
+    background: White;
+    color: Green;
+    width: 270px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+    transform: translate(-50%, +50%);
+    cursor: hand;
+    transition: 0.5s;
+    outline: none;
+}
+
+.presentation button:hover{
+    color: white;
+    background: Green;
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+}

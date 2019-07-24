@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Bristol Making | Crée dès aujourd'hui votre propre fiche révision grâce à la reconaissance vocale !</title>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <body>
+        <div class="consigne">
+            <h2>Comment ça marche ?</h2>
+            <br>
+            <p>Pour modifier la couleur, dite(avant de dire votre texte): 
+            # couleur de votre choix 
+            (exemple: # rouge )
+            Pour stopper la couleur, dite : #stop</p>
+            <br>
+            <p>Pour ajouter des caractères,dite:
+            le nom du caractère 
+            (exemple: point )</p>
+            <br>
+            <p>Pour surligner le texte, dite: 
+            # fluo la couleur de votre choix 
+            (exemple: # fluo Jaune ) </p>
+            <br>
+            <p>Pour modifier le titre, dite: 
+            # mets titre (...) 
+           (exemple: # mets en tritre Maths )</p>
+            <br>
+            <p>Pour effectuer une recher Wikipédia, dite: 
+            # recherche (...) 
+            (exemple: # recherche Victor Hugo )</p>
+            <br>
+            <p>Pour ouvrir un fichier ou une image clicker sur le bouton "ouvrir"</p>
+            <br>
+            <p>Pour enregistrer votre projet et l envoyer à des amis clicker sur "Enregister"</p>
+        </div>
+
+        <input onchange="javascript:openfile(event);" type='file' id='fichier' style='display: none' accept=".txt,.png,.jpg,.gif"/>
+
+        <div class="menu" role="group">
+            <button onclick="javascript:validevocal();" class="btn-menu" style="background: Red; left: 0">Vocale</button>
+            <button onclick="javascript:enregistrer();" class="btn-menu" style="background: Blue; left: 20%">Enregistrer</button>
+            <button onclick="javascript:document.getElementById('fichier').click();" class="btn-menu" style="background: Green; left: 40%">Ouvrir</button>
+            <button onclick="javascript:Lecture();" class="btn-menu" style="background: Orange; left: 60%">Ecouter</button>
+            <button onclick="javascript:window.print()" class="btn-menu" style="background: Yellow; left: 80%">Imprimer</button>
+        </div>
+
+        <img class="bristol" src="img/base.png" id="fiche1">
+        <img class="bristol" src="img/base.png" id="fiche2" style="left: 62%">
+
+        <div class="zonedetexte" contenteditable="true" id="zone1" oninput="javascript:choixBox();"></div>
+        <div class="zonedetexte" contenteditable="true" style="left: 63%" id="zone2"></div>
+
+        <h4 class="titreFeuille" contenteditable="true">Titre 1</h4>
+        <h4 class="titreFeuille" style="left: 76%" contenteditable="true">Titre 2</h4>
+
+        <div class="couleur">
+            <button onclick="javascript:base('img/base-bleu.png')">Bleu</button>
+            <button onclick="javascript:base('img/base-violet.png')" style="background: violet">Violet</button>
+            <button onclick="javascript:base('img/base-vert.png')" style="background: Green">Vert</button>
+            <button onclick="javascript:base('img/base.png')" style="background: Grey">Blanc</button>
+        </div>
+
+        <div class="presentation" id="popup">
+            <img class="back" src="img/back2.jpg"/>
+            <h1>MakeMyBristol</h1>
+            <button onclick="javascript:closePopup()">COMMENCER</button>
+        </div>
+            
+    </body>
+    <script src="js/lib/lb-wiki.js" type="text/javascript"></script>
+    <script src="js/lib/SpeechAPI.js" type="text/javascript"></script>
+
+    <script src="js/vocal.js" type="text/javascript"></script>
+</html>
